@@ -36,11 +36,15 @@ $(folderlist).on('click', '#folders', function(e){
 });
 
 $(notelist).on('click', '#two_button', function(e){
-    var note_div = $("<div class='notes'> </div>");
-    var left_notes =$("<input type='text' id='crd_ntes'value=''>");
-    var right_notes = $("<input type='text' id='crd_ntes'value=''>");
+    var note_div = $("<form action='/postcard.php'> <input type ='text' id='keyword' value=' '> <input type='text' id='definition' value=' '> <input id='submit_butt' type='submit' value='Save'> </form>");
+    var radio_butt =$("<input id='radio_butt' type='radio' value='Starred'>");
+    //var note_div = $("<div class='notes'> </div>");
+    //var left_notes =$("<input type='text' id='crd_ntes'value=''>");
+    //var right_notes = $("<input type='text' id='crd_ntes'value=''>");
     $(notelist).append(note_div);
-    note_div.append(left_notes).append(right_notes);    
+    $(note_div).append(radio_butt);
+    //note_div.append(left_notes).append(right_notes);    
+    $(notelist).append(create_button_2).append(delete_button_2);
 });
 
 $(notelist).on('click', '.notes', function(e){
