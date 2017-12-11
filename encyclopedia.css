@@ -1,0 +1,67 @@
+.fldlst{
+    width: 200px;
+    height: 100%;
+    background: rgb(117, 215, 241);
+    float: left;
+    left: 0;
+    position: absolute;
+}
+
+.ntelst {
+    position: relative;
+    float: right;
+    background: red;
+    right: 0;
+    width: calc(100% - 200px);
+}
+
+#one_button {
+    margin: auto;
+    top: 10px;
+    width: 170px;
+    height: 40px;
+    display:block;
+    margin-top: 10px;
+    bottom: 0;
+    
+}
+#d_butt_1{
+    display: block;
+    margin: auto;
+    bottom: 10px;
+    width: 170px;
+    height: 40px;
+    margin-top: 5px;
+}
+.button:active{
+    transform: translateY(4px);
+}
+
+#folders{
+    display: block;
+    margin: auto;
+    bottom: 10px;
+    width: 170px;
+    height: 40px;
+    margin-top: 5px;
+}
+#two_button{
+    display: block;
+    margin: auto;
+    bottom: 10px;
+    width: 170px;
+    height: 40px;
+    margin-top: 5px;
+}
+#d_butt_2{
+    display: block;
+    margin: auto;
+    bottom: 10px;
+    width: 170px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+
+
+
