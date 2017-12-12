@@ -12,7 +12,7 @@
     height: 90%;
     position: absolute;
     float: right;
-    border: thick, grey;
+    background: grey;
     right: 0;
     width: calc(100% - 200px);
     overflow: auto;
@@ -72,25 +72,30 @@
 }
 
 #keyword{
-    width: 46%;
+    width: 45%;
     height: 100px;
     font-size: auto;
 
 }
 #definition{
-    width: 46%;
+    width: 45%;
     height: 100px;
     font-size: auto;
 
 }
 
 #submit_butt{
-    display: block;
     float: right;
 }
 #radio_butt{
+   float: right;
+    
+}
+
+#userinfo{
     display: block;
-    float: right;
+    width: 300px;
+    height: 300px;
 }
 
 

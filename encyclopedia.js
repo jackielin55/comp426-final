@@ -13,7 +13,16 @@ var encyclopedia = function (ui_div){
     $(ui_div).append(folderlist).append(notelist);
     $(folderlist).append(create_button_1).append(delete_button_1);
    // $(notelist).append(create_button_2).append(delete_button_2);
+    var userinfo = $("<form id='userinfo' action='/postcard.php'> <input type ='text' id='username' value='Username'> <input type='text' id='password' value='Password'> <input id='user_submit' type='submit' value='Log In'> </form>");
+    $(notelist).append(userinfo);
 
+getUser = function(){
+
+}
+
+$(notelist).on('click', '#user_submit', function(e){
+    userinfo.remove();
+});
 
 $('#one_button').click(function(){
     // $(folderlist).append(ui_input_form);
@@ -36,8 +45,9 @@ $(folderlist).on('click', '#folders', function(e){
 });
 
 $(notelist).on('click', '#two_button', function(e){
-    var note_div = $("<form action='/postcard.php'> <input type ='text' id='keyword' value=' '> <input type='text' id='definition' value=' '> <input id='submit_butt' type='submit' value='Save'> </form>");
+    var note_div = $("<form class='notes' action='/postcard.php'> <input type ='text' id='keyword' value=' '> <input type='text' id='definition' value=' '> <input id='submit_butt' type='submit' value='Save'> </form>");
     var radio_butt =$("<input id='radio_butt' type='radio' value='Starred'>");
+    //var check_box = $("<input id='highlight' type='checkbox' onchange='highlight(keyword)'>");
     //var note_div = $("<div class='notes'> </div>");
     //var left_notes =$("<input type='text' id='crd_ntes'value=''>");
     //var right_notes = $("<input type='text' id='crd_ntes'value=''>");
@@ -46,6 +56,10 @@ $(notelist).on('click', '#two_button', function(e){
     //note_div.append(left_notes).append(right_notes);    
     $(notelist).append(create_button_2).append(delete_button_2);
 });
+var highlight = function(e){
+    alert("adf");
+    e.css('background: yellow');
+}
 
 $(notelist).on('click', '.notes', function(e){
     tobedeleted = $(this);
@@ -58,6 +72,9 @@ $(notelist).on('click', '#d_butt_2', function(e){
 $('#d_butt_1').click(function(){
     fld.remove();
 });
+
+
+
 
 
 
